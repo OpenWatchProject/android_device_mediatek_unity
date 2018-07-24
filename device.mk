@@ -20,7 +20,8 @@ endif
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:system/etc/permissions/android.hardware.bluetooth.xml \
-    $(LOCAL_PATH)/rootdir/system/etc/permissions/android.hardware.camera.xml:system/etc/permissions/android.hardware.camera.xml \
+    $(LOCAL_PATH)/configs/permissions/android.hardware.camera.xml:system/etc/permissions/android.hardware.camera.xml \
+    $(LOCAL_PATH)/configs/permissions/android.hardware.microphone.xml:system/etc/permissions/android.hardware.microphone.xml \
     frameworks/native/data/etc/android.hardware.faketouch.xml:system/etc/permissions/android.hardware.faketouch.xml \
     frameworks/native/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
     frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:system/etc/permissions/android.hardware.sensor.accelerometer.xml \
@@ -42,47 +43,41 @@ PRODUCT_COPY_FILES += \
 
 # AGPS
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/system/etc/agps_profiles_conf2.xml:system/etc/agps_profiles_conf2.xml
+    $(LOCAL_PATH)/configs/gps/agps_profiles_conf2.xml:system/etc/agps_profiles_conf2.xml
 
 # Telecom
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/system/etc/apns-conf.xml:system/etc/apns-conf.xml \
-    $(LOCAL_PATH)/rootdir/system/etc/ecc_list.xml:system/etc/ecc_list.xml \
-    $(LOCAL_PATH)/rootdir/system/etc/spn-conf.xml:system/etc/spn-conf.xml \
+    $(LOCAL_PATH)/configs/telephony/apns-conf.xml:system/etc/apns-conf.xml \
+    $(LOCAL_PATH)/configs/telephony/ecc_list.xml:system/etc/ecc_list.xml \
+    $(LOCAL_PATH)/configs/telephony/spn-conf.xml:system/etc/spn-conf.xml \
     
 # Audio	
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/system/etc/media_profiles.xml:system/etc/media_profiles.xml \
-    $(LOCAL_PATH)/rootdir/system/etc/media_codecs.xml:system/etc/media_codecs.xml \
-    $(LOCAL_PATH)/rootdir/system/etc/mtk_omx_core.cfg:system/etc/mtk_omx_core.cfg \
-    $(LOCAL_PATH)/rootdir/system/etc/audio_device.xml:system/etc/audio_device.xml \
-    $(LOCAL_PATH)/rootdir/system/etc/audio_policy.conf:system/etc/audio_policy.conf \
-    $(LOCAL_PATH)/rootdir/system/etc/permissions/android.hardware.microphone.xml:system/etc/permissions/android.hardware.microphone.xml \
+    $(LOCAL_PATH)/configs/media/media_profiles.xml:system/etc/media_profiles.xml \
+    $(LOCAL_PATH)/configs/media/media_codecs.xml:system/etc/media_codecs.xml \
+    $(LOCAL_PATH)/configs/media/mtk_omx_core.cfg:system/etc/mtk_omx_core.cfg \
+    $(LOCAL_PATH)/configs/media/audio_device.xml:system/etc/audio_device.xml \
+    $(LOCAL_PATH)/configs/media/audio_policy.conf:system/etc/audio_policy.conf \
 
 # Thermal
 PRODUCT_COPY_FILES += \
-     $(LOCAL_PATH)/rootdir/system/etc/tp/thermal.conf:system/etc/.tp/thermal.conf \
-     $(LOCAL_PATH)/rootdir/system/etc/tp/thermal.off.conf:system/etc/.tp/thermal.off.conf
-	
-# Keylayout
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/system/usr/keylayout/mtk-kpd.kl:system/usr/keylayout/mtk-kpd.kl \
-
+    $(LOCAL_PATH)/configs/thermal/thermal.conf:system/etc/.tp/thermal.conf \
+    $(LOCAL_PATH)/configs/thermal/thermal.off.conf:system/etc/.tp/thermal.off.conf
 
 # RAMDISK
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/root//sbin/busybox:root/sbin/busybox \
-    $(LOCAL_PATH)/rootdir/root/enableswap.sh:root/enableswap.sh \
-    $(LOCAL_PATH)/rootdir/root/fstab.mt6580:root/fstab.mt6580 \
-    $(LOCAL_PATH)/rootdir/root/init.recovery.mt6580.rc:root/init.recovery.mt6580.rc \
-    $(LOCAL_PATH)/rootdir/root/init.mt6580.rc:root/init.mt6580.rc \
-    $(LOCAL_PATH)/rootdir/root/init.project.rc:root/init.project.rc \
-    $(LOCAL_PATH)/rootdir/root/init.ssd.rc:root/init.ssd.rc \
-    $(LOCAL_PATH)/rootdir/root/init.modem.rc:root/init.modem.rc \
-    $(LOCAL_PATH)/rootdir/root/ueventd.rc:root/ueventd.rc \
-    $(LOCAL_PATH)/rootdir/root/init.mt6580.usb.rc:root/init.mt6580.usb.rc \
-    $(LOCAL_PATH)/rootdir/root/init.trace.rc:root/init.trace.rc \
-    $(LOCAL_PATH)/rootdir/root/init.nvdata.rc:root/init.nvdata.rc \
+    $(LOCAL_PATH)/rootdir/sbin/busybox:root/sbin/busybox \
+    $(LOCAL_PATH)/rootdir/enableswap.sh:root/enableswap.sh \
+    $(LOCAL_PATH)/rootdir/fstab.mt6580:root/fstab.mt6580 \
+    $(LOCAL_PATH)/rootdir/init.recovery.mt6580.rc:root/init.recovery.mt6580.rc \
+    $(LOCAL_PATH)/rootdir/init.mt6580.rc:root/init.mt6580.rc \
+    $(LOCAL_PATH)/rootdir/init.project.rc:root/init.project.rc \
+    $(LOCAL_PATH)/rootdir/init.ssd.rc:root/init.ssd.rc \
+    $(LOCAL_PATH)/rootdir/init.modem.rc:root/init.modem.rc \
+    $(LOCAL_PATH)/rootdir/ueventd.rc:root/ueventd.rc \
+    $(LOCAL_PATH)/rootdir/init.mt6580.usb.rc:root/init.mt6580.usb.rc \
+    $(LOCAL_PATH)/rootdir/init.trace.rc:root/init.trace.rc \
+    $(LOCAL_PATH)/rootdir/init.nvdata.rc:root/init.nvdata.rc \
     $(LOCAL_KERNEL):kernel
 
 DEVICE_PACKAGE_OVERLAYS += device/mediatek/unity/overlay

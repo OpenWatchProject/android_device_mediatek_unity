@@ -68,7 +68,7 @@ BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x04000000 -
 BOARD_CUSTOM_BOOTIMG := true
 TARGET_PREBUILT_RECOVERY_KERNEL := device/mediatek/unity/kernel
 
-TARGET_RECOVERY_FSTAB := device/mediatek/unity/rootdir/root/fstab.mt6580
+TARGET_RECOVERY_FSTAB := device/mediatek/unity/rootdir/fstab.mt6580
 
 TARGET_OTA_ASSERT_DEVICE := unity
 
@@ -83,7 +83,7 @@ BOARD_BLUETOOTH_DOES_NOT_USE_RFKILL := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/mediatek/unity/bluetooth
 
 # EGL settings
-BOARD_EGL_CFG := device/mediatek/unity/rootdir/system/lib/egl/egl.cfg
+BOARD_EGL_CFG := device/mediatek/unity/configsegl/egl.cfg
 USE_OPENGL_RENDERER := true
 BOARD_EGL_WORKAROUND_BUG_10194508 := true
 
