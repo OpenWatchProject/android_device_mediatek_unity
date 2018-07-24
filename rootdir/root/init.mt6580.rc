@@ -237,6 +237,7 @@ on post-fs-data
     chmod 0660 /dev/gyroscope
     chmod 0660 /dev/aal_als
     chmod 0660 /dev/m_batch_misc
+    chmod 0777 /dev/pixart_ofn
 
     chmod 0660 /sys/devices/platform/msensor/driver/cpsopmode
     chmod 0660 /sys/devices/platform/msensor/driver/cpsreptxy
@@ -252,6 +253,7 @@ on post-fs-data
     chown system system /dev/gyroscope
     chown system system /dev/aal_als
     chown system system /dev/m_batch_misc
+    chown root root  /dev/pixart_ofn
 
     chmod 0660 /sys/class/misc/m_acc_misc/accenablenodata
     chmod 0660 /sys/class/misc/m_acc_misc/accactive
@@ -734,6 +736,9 @@ on post-fs-data
     exec /system/bin/rm -f /cache/.ipoh.img
     
     chmod 0666 /dev/exm0
+
+    chown system system /sys/class/misc/Wiite_HeartRate/enable
+    chmod 0777 /sys/class/misc/Wiite_HeartRate/enable
 
 # End of adding by MTK drivers
 # -----------------------
