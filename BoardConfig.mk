@@ -1,4 +1,4 @@
-LOCAL_PATH := device/infinix/d5110_infinix
+LOCAL_PATH := device/mediatek/unity
 
 # Platform
 TARGET_BOARD_PLATFORM := mt6580
@@ -63,33 +63,14 @@ TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
 
 # We use prebuilt kernel to compile because no kernel source code
 
-TARGET_PREBUILT_KERNEL := device/infinix/d5110_infinix/kernel
+TARGET_PREBUILT_KERNEL := device/mediatek/unity/kernel
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x04000000 --tags_offset 0x0e000000 --board X510-D5110-L-20
 BOARD_CUSTOM_BOOTIMG := true
-TARGET_PREBUILT_RECOVERY_KERNEL := device/infinix/d5110_infinix/kernel
+TARGET_PREBUILT_RECOVERY_KERNEL := device/mediatek/unity/kernel
 
-TARGET_RECOVERY_FSTAB := device/infinix/d5110_infinix/rootdir/root/fstab.mt6580
+TARGET_RECOVERY_FSTAB := device/mediatek/unity/rootdir/root/fstab.mt6580
 
-TARGET_OTA_ASSERT_DEVICE := d5110,d5110_infinix,Infinix_X510,Infinix_X510_sprout,"Infinix D5110"
-# This is what we need to compile TWRP
-DEVICE_RESOLUTION := 720x1280
-TARGET_SCREEN_HEIGHT := 1280
-TARGET_SCREEN_WIDTH := 720
-RECOVERY_GRAPHICS_USE_LINELENGTH := true
-TW_NO_REBOOT_BOOTLOADER := true
-TW_BRIGHTNESS_PATH := /sys/devices/platform/leds-mt65xx/leds/lcd-backlight/brightness
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/mt_usb/musb-hdrc.0.auto/gadget/lun%d/file
-TW_MAX_BRIGHTNESS := 255
-TW_INTERNAL_STORAGE_PATH := "/emmc"
-TW_INTERNAL_STORAGE_MOUNT_POINT := "emmc"
-TW_EXTERNAL_STORAGE_PATH := "/external_sd"
-TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
-TW_CRYPTO_FS_TYPE := "ext4"
-TW_CRYPTO_REAL_BLKDEV := "/dev/block/platform/mtk-msdc.0/by-name/userdata"
-TW_CRYPTO_MNT_POINT := "/data"
-TW_CRYPTO_FS_OPTIONS := "nosuid,nodev,noatime,discard,noauto_da_alloc,data=ordered"
-TW_EXCLUDE_SUPERSU := true
-TW_INCLUDE_FB2PNG := true
+TARGET_OTA_ASSERT_DEVICE := unity
 
 # Deodex
 WITH_DEXPREOPT := false
@@ -99,10 +80,10 @@ DISABLE_DEXPREOPT := true
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_MTK := true
 BOARD_BLUETOOTH_DOES_NOT_USE_RFKILL := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/infinix/d5110_infinix/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/mediatek/unity/bluetooth
 
 # EGL settings
-BOARD_EGL_CFG := device/infinix/d5110_infinix/rootdir/system/lib/egl/egl.cfg
+BOARD_EGL_CFG := device/mediatek/unity/rootdir/system/lib/egl/egl.cfg
 USE_OPENGL_RENDERER := true
 BOARD_EGL_WORKAROUND_BUG_10194508 := true
 
@@ -111,7 +92,7 @@ TARGET_CPU_MEMCPY_OPT_DISABLE := true
 
 # SELINUX
 BOARD_SEPOLICY_DIRS := \
-       device/infinix/d5110_infinix/sepolicy
+       device/mediatek/unity/sepolicy
 
 BOARD_SEPOLICY_UNION := \
        device.te \
@@ -123,7 +104,7 @@ BOARD_SEPOLICY_UNION := \
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/virtual/android_usb/android0/f_mass_storage/lun%d/file"
 
 # RIL
-# BOARD_RIL_CLASS := ../../../device/infinix/d5110_infinix/ril/
+# BOARD_RIL_CLASS := ../../../device/mediatek/unity/ril/
 
 BOARD_CONNECTIVITY_VENDOR := MediaTek
 BOARD_CONNECTIVITY_MODULE := conn_soc
@@ -140,4 +121,4 @@ WIFI_DRIVER_FW_PATH_AP:=AP
 WIFI_DRIVER_FW_PATH_P2P:=P2P
 
 # GPS
-TARGET_SPECIFIC_HEADER_PATH := device/infinix/d5110_infinix/include
+TARGET_SPECIFIC_HEADER_PATH := device/mediatek/unity/include

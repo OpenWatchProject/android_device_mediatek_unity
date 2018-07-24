@@ -29,8 +29,8 @@ ro.sf.lcd_density=320
 ro.opengles.version=131072
 
 wifi.direct.interface=p2p0
-dalvik.vm.heapgrowthlimit=96m
-dalvik.vm.heapsize=128m
+dalvik.vm.heapgrowthlimit=128m
+dalvik.vm.heapsize=256m
 
 # USB MTP WHQL
 ro.sys.usb.mtp.whql.enable=0
@@ -59,12 +59,12 @@ ro.boot.selinux=disable
 debug.hwui.render_dirty_regions=false
 
 ro.mediatek.chip_ver=S01
-ro.mediatek.version.release=ALPS.L1.MP6.A1SP.V1.4_RGK6580.A1WE.A.L
+ro.mediatek.version.release=ALPS.L1.MP6.V2_SF6580.WEG.L_P76ro.
 ro.mediatek.platform=MT6580
 ro.mediatek.version.sdk=4
 ro.telephony.sim.count=2
 persist.radio.default.sim=0
-persist.radio.multisim.config=dsds
+persist.radio.multisim.config=ss
 ro.telephony.default_network=0,1
 ril.first.md=1
 ril.flightmode.poweroffMD=1
@@ -80,5 +80,5 @@ ril.radiooff.poweroffMD=0
 ro.telephony.ril_class=MediaTekRIL
 ro.telephony.ril.config=fakeiccid
 
-# Fix navbars buttons on HOT 2
-qemu.hw.mainkeys=0
+# Disable navbar
+qemu.hw.mainkeys=1
