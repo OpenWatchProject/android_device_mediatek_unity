@@ -80,7 +80,7 @@ BOARD_BLUETOOTH_DOES_NOT_USE_RFKILL := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/mediatek/unity/bluetooth
 
 # EGL settings
-BOARD_EGL_CFG := device/mediatek/unity/configsegl/egl.cfg
+BOARD_EGL_CFG := device/mediatek/unity/configs/egl/egl.cfg
 USE_OPENGL_RENDERER := true
 BOARD_EGL_WORKAROUND_BUG_10194508 := true
 
